@@ -1,0 +1,128 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Scraping" this:Scraping.in_OutputDataTable="[New System.Data.DataTable]" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_OutputDataTable" Type="InArgument(sd:DataTable)" />
+  </x:Members>
+  <mva:VisualBasic.Settings>
+    <x:Null />
+  </mva:VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>699.2,782.4</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>Scraping_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="78">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>UiPath.DataTableUtilities</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Excel.Activities.Business</x:String>
+      <x:String>UiPath.Shared.Activities.Business</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.ExtractData</x:String>
+      <x:String>System.Text.RegularExpressions</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="31">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Scraping" sap:VirtualizedContainerService.HintSize="475.2,717.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="sd:DataTable" Default="[New System.Data.DataTable]" Name="ExtractDataTable" />
+      <Variable x:TypeArguments="sd:DataTable" Name="OutputDataTable" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" CloseMode="Always" DisplayName="Use Chrome - Go to SuperHeroDB" sap:VirtualizedContainerService.HintSize="433.6,468.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="e8a8b7cd-c93d-454d-a0da-4eb886efec5e" Version="V1" WindowResize="Maximize">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Doing inside the site" sap:VirtualizedContainerService.HintSize="375.2,252" sap2010:WorkflowViewState.IdRef="Sequence_42">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NExtractData ContinueOnError="True" DataTable="[in_OutputDataTable]" DisplayName="Extract DataTable Characters" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Structured'&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column0' Name='Herói'&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column1' Name='URL'&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataNextLink' /&gt;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract&gt;&lt;column exact='1' name='Column0' attr='text' name2='Column1' attr2='href'&gt;&lt;webctrl tag='div' idx='4' /&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='ul' /&gt;&lt;webctrl tag='li' /&gt;&lt;webctrl tag='a' idx='1' /&gt;&lt;/column&gt;&lt;/extract&gt;" ExtractSimilar="True" sap:VirtualizedContainerService.HintSize="333.6,157.6" sap2010:WorkflowViewState.IdRef="NExtractData_1" InteractionMode="Simulate" LimitExtractionTo="Rows" MaximumResults="0" ScopeIdentifier="e8a8b7cd-c93d-454d-a0da-4eb886efec5e" Version="V1">
+              <uix:NExtractData.NextLink>
+                <uix:TargetAnchorable BrowserURL="https://www.superherodb.com/characters/" DesignTimeRectangle="1564, 650, 61, 40" ElementType="Text" FriendlyName="'Next'" FullSelectorArgument="&lt;webctrl aaname='Next' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Next' tag='A' type='' check:text='Next' /&gt;" Guid="83135812-2272-4703-ace6-2cf9ca9fd8cc" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEEAAAAsCAYAAAA6ndXBAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAKkSURBVGhD7Za/a9tAFMf7px4GUw6DKdSFGOIOzuBFw2EwHZypZEkhXkriJZjiDiYEgpZkKFiBpBC0iGAwHr/56iS1+nEpJmlB1G/4gP3uTkife+/dvdlsNth1RAIRCUQkEJFARAIRCUQkEJFARAIRCUQkEJFARAIRCUQkkJdJuJ2gqzTMInKPWwJM9hTnuMb+HsFJF2q4cI5tyyskKChtMI8c45adkDCAGWpoM0fkmrMbEgwW0QKmpeDNXGXxjIR1CP/EQ+ctM4nZ1Gz1MP52j1VuzvXnDtT+BEEuZnmYot/o4Ogm/fg4G/PsOdZswesk8PfqYgTd8HBeKQuHhDVjH5vQgwn8h5WNrZbn8CiydxLk5l3j6L1C/yz8HduEmB4o6EM/F6tDJtj/K1x+0lAHU4SFeVUJ4WmPu3WMYJ2fR5bH6FLk/DEXuzlCp9HH9CH5H808qNYYfmltTSSQtY8xd7O4c2UJP+zuerMkA4oku1wes2XhnSOK5jBaY3yVX5NQHwkxV2OWRQ+T2yxWkhCynhXH77LxIouhQjdfEjG2LDQ6pFwGGfWSQIoNrSTBrik1shIVCSQ863OMZREW4xm1k5A1tKTJuTLBseZPpGUwGPBD47JwzKmfhBjb5Jj2y3JPoKB3bXu8VdY4iTA3aRmkcl1HcT0lkOALX2zfwHzIS0hf+Jkdje7uC/Hou4FujXCZnRi251SP4tpKsPeB/aTO8xKyuL0n/ExPglWI61ODdpvPyz4wLYPRRfG08A95FJclLkxyfY97Rvno3ZJ/IyFmOUGvUZIQk94Yu61m0hCbGr3hV/i/Gl9aBtzdSsY8XmJUuaEGmHptNONnNZg5+flb8jIJ/xkigYgEIhKISCAigYgEIhKISCAigYgEIhKISCAiYbPBEyRHj7jeRFhfAAAAAElFTkSuQmCC" ScopeSelectorArgument="&lt;html app='chrome.exe' title='List of all superheroes and villains' /&gt;" SearchSteps="FuzzySelector, Image" />
+              </uix:NExtractData.NextLink>
+              <uix:NExtractData.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="148, -2550, 1620, 3525" FriendlyName="'List of'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;main&amp;gt;div' tag='DIV' /&gt;" Guid="eedca108-9f0d-4ad1-b7ce-988d179efc16" InformativeScreenshot="24821ad49acb3405cb6df18c026a63fd.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='List of all superheroes and villains' /&gt;" SearchSteps="Selector" />
+              </uix:NExtractData.Target>
+            </uix:NExtractData>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-9, -9, 1938, 1048" BrowserType="Chrome" IconBase64="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" InformativeScreenshot="eb3cf6df338f421d7b111b49568d0466.png" Selector="&lt;html app='chrome.exe' title='List of all superheroes and villains'/&gt;" Url="https://www.superherodb.com/characters/" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+    <ui:WriteRange AddHeaders="True" DataTable="[in_OutputDataTable]" DisplayName="Write Range - ListagemHeróis.xlsx" sap:VirtualizedContainerService.HintSize="433.6,116" sap2010:WorkflowViewState.IdRef="WriteRange_5" SheetName="Sheet1" StartingCell="A1" WorkbookPath="Data\ListagemCompleta.xlsx" />
+  </Sequence>
+</Activity>
