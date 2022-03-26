@@ -1,0 +1,28 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+<div class="text-center">
+    <h1 class="display-4">Bem-vindo</h1>
+    <p>Comece sua nova aventura!</p>
+ 
+
+</div>
+<div class="logo"></div>
+
+
+@{
+    ViewData["Title"] = "Login";
+}
+
+<form asp-controller="LoginP" asp-action="Logar" method="post">
+   
+   
+    <input type="text" class = "Usernamebox" name="username" placeholder = "Login"/>
+
+    <input type="password" class = "Passwordbox" name="senha"  placeholder = "Password"/>
+
+
+    <input class = "botao" type = "submit" value="  Sign-In" />
+</form>
